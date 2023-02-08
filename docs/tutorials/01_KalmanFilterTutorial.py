@@ -181,7 +181,8 @@ for k in range(1, num_steps + 1):
 from stonesoup.plotter import Plotterly
 plotter = Plotterly()
 plotter.plot_ground_truths(truth, [0, 2])
-plotter.fig
+# plotter.fig
+plotter.fig.write_html('1.html')
 
 
 # %%
@@ -253,7 +254,8 @@ for state in truth:
 # %%
 # Plot the result, again mapping the x and y position values
 plotter.plot_measurements(measurements, [0, 2])
-plotter.fig
+# plotter.fig
+plotter.fig.write_html('2.html')
 
 # %%
 # At this stage you should have a moderately linear ground truth path (dotted line) with a series
@@ -344,7 +346,8 @@ for measurement in measurements:
 
 
 plotter.plot_tracks(track, [0, 2], uncertainty=True)
-plotter.fig
+# plotter.fig
+plotter.fig.write_html('3.html')
 
 
 # %%
